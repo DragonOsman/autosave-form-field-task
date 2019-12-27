@@ -1,7 +1,5 @@
 "use strict";
 
-const area = document.getElementById("area");
-area.placeholder = "Write here";
 document.body.append(document.createElement("br"));
 const clearButton = document.createElement("button");
 clearButton.textContent = "Clear";
@@ -11,6 +9,9 @@ clearButton.onclick = () => {
   localStorage.removeItem("area");
   area.value = "";
 }
+
+const area = document.getElementById("area");
+area.placeholder = "Write here";
 
 area.value = localStorage.getItem("area");
 area.oninput = () => {
